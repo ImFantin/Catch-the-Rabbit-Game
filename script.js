@@ -29,6 +29,8 @@ let animation = -1;
 
 //called onload, call coordinates/draw functions.
 function setup() {
+    updateDate();
+    
     let canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
     
@@ -861,4 +863,11 @@ function reset() {
     goal.drawObjective();
     enemy.drawEnemies();
     player.drawPlayer();
+}
+
+function updateDate() {
+    let date = new Date();
+    let year = date.getFullYear();
+    let footerP = document.getElementById('updateYear');
+    footerP.innerHTML = `Copyright &copy ${year} Douglas Fantin`;
 }
