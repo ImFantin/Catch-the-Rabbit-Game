@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+        <title>Project, Final Submission</title>
+        <script src="script.js"></script>
+        <style>
+            body {
+                margin-left: 650px;
+            }
+
+            canvas {
+                margin-top: 25px;
+            }
+        </style>
+    </head>
+    <body onload="setup()" onkeydown="addMoves(event)">
+
+        <h1>Catch the Rabbit while avoiding the Hunter!</h1>
+
+        <h2 id="movesOutput">Moves:</h2>
+        <h2 id="powerMoves">Power Moves Left:</h2>
+
+        <button onclick="startAnimation()">Go!</button><br/>
+
+        <canvas id="canvas" style="border: 1px solid LightSlateGrey; background: MediumSeaGreen;" width="600" height="600"></canvas>
+
+        <h2 id="objective">Score: 0</h2>
+
+        <button onclick="reset()">Reset</button>
+        
+    </body>
+</html>
